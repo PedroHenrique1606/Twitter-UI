@@ -1,0 +1,9 @@
+body{
+    background: #121214;
+    color: #e1e1e6;
+}
+.tweet{
+    padding: 16px;
+    border: 1px solid #ccc;
+    margin: 12px;
+}
