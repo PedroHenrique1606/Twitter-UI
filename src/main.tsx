@@ -1,30 +1,53 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Tweet } from './components/Tweet'
 import './global.css'
-//Ferramenta de tipagem estática para o JS
-//Tipagem estática: mecanismo par evitar erros ENQUANTO estamos desenvolvendo
+import twitterLogo from './assets/logo-twitter.svg'
+import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react'
 
-//Programação declarativa
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <h1>Hello, World.</h1>
-    <Tweet user='Pedro' likes={10}>
-      Meu primeiro tweet
-    </Tweet>
-    <Tweet user='Rodrigo'>
-      Meu primeiro tweet
-    </Tweet>
-    <Tweet user='Dante'>
-      Meu primeiro tweet
-    </Tweet>
-    <Tweet user='Ana'>
-      Meu primeiro tweet
-    </Tweet>
-
-    <Tweet user='Carina'>
-      Conteúdo 4
-    </Tweet>
+    <div className="layout">
+      <aside className='sidebar '>
+        <img src={twitterLogo} className='logo' alt="twitter logo" />
+        <nav className='main-navigation'>
+          <a href="" className='active'>
+            <House weight="fill"></House>
+            Home
+            </a>
+          <a href="">
+            <Hash></Hash>
+            Explore
+            </a>
+          <a href="">
+            <Bell></Bell>
+            Notifications
+          </a>
+          <a href="">
+            <Envelope></Envelope>
+            Messages
+          </a>
+          <a href="">
+            <BookmarkSimple></BookmarkSimple>
+            Bookmarks
+          </a>
+          <a href="">
+            <FileText></FileText>
+            Lists
+          </a>
+          <a href="">
+            <User></User>
+            Profile
+          </a>
+          <a href="">
+            <DotsThreeCircle></DotsThreeCircle>
+            More
+          </a>
+        </nav>
+        <button className='new-tweet' type='button'>Tweet</button>
+      </aside>
+      <div className="content">
+        Content
+      </div>
+    </div>
   </React.StrictMode>,
 )
-//Componentes: pequenas partes de inferface reuitilizavéis. 

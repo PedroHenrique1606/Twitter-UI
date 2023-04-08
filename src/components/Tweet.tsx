@@ -8,7 +8,7 @@ const tweetStyles = {
 }
 
 export function Tweet(props:TweetProps){
-    return  (
+    return (
         <div className="tweet" style={tweetStyles}>
             <strong>{props.user}</strong>
             <p>{props.children}</p>
